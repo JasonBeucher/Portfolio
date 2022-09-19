@@ -25,7 +25,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: rgb(172, 172, 172);
+    background:var(--bg-secondary);
     
     border-radius: 8px;
 }
@@ -90,10 +90,6 @@ svg {
 }
 
 
-.nav-link svg {
-    min-width: 2rem;
-    margin: 0 1.5rem;
-}
 
 
 .nav-link:hover {
@@ -132,6 +128,33 @@ svg {
 }
 
 @media only screen and (max-width:600px){
+    .nav-link svg {
+        min-width: 2rem;
+        max-width: 2rem;
+        margin: 0 1.5rem;
+    }
+    .navbar{
+        bottom:0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .logo{
+        display: none;
+    }
+    .navbar-nav{
+        flex-direction: row;
+    }
+    .nav-link{
+        justify-content: center;
+    }
+    main{margin:0;}
+}
+@media only screen and (max-width:380px){
+    .nav-link svg {
+        min-width: 1rem;
+        max-width: 2rem;
+        margin: 0 1rem;
+    }
     .navbar{
         bottom:0;
         width: 100vw;
@@ -150,6 +173,11 @@ svg {
 }
 
 @media only screen and (min-width: 600px)  {
+    .nav-link svg {
+        min-width: 2rem;
+        max-width: 2rem;
+        margin: 0 1.5rem;
+    }
     .navbar{
         top:0;
         width: 5rem;
